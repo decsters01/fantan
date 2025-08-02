@@ -1,0 +1,88 @@
+{
+  "configuracoes_gerais": {
+    "arquivo_dados": "31 dias",
+    "periodo_analise": {
+      "data_inicio": "2023-05-30",
+      "data_fim": "2023-06-29"
+    },
+    "formato_saida": {
+      "graficos": true,
+      "relatorio_texto": true,
+      "exportar_json": true,
+      "exportar_csv": true
+    }
+  },
+  "analise_estatisticas": {
+    "tipos_aposta": ["1/2", "2/3", "3/4"],
+    "horarios_analise": {
+      "inicio_dia": 0,
+      "fim_dia": 23,
+      "intervalo_horas": 1
+    },
+    "metricas": {
+      "calcular_assertividade": true,
+      "calcular_sequencias": true,
+      "calcular_tendencias": true,
+      "calcular_correlacoes": true
+    }
+  },
+  "visualizacao": {
+    "graficos": {
+      "tamanho_figura": [15, 12],
+      "dpi": 300,
+      "formato_saida": "png",
+      "estilo": "seaborn-v0_8",
+      "cores": {
+        "sucesso": "#2ecc71",
+        "falha": "#e74c3c",
+        "neutro": "#f39c12",
+        "background": "#ecf0f1"
+      }
+    },
+    "heatmap": {
+      "colormap": "RdYlGn",
+      "aspecto": "auto",
+      "interpolacao": "nearest"
+    }
+  },
+  "exportacao": {
+    "formato_data": "%Y-%m-%d",
+    "formato_hora": "%H:%M",
+    "encoding": "utf-8",
+    "separador_csv": ",",
+    "indentacao_json": 2
+  },
+  "filtros": {
+    "tipos_aposta_incluir": ["1/2", "2/3", "3/4"],
+    "horarios_incluir": {
+      "inicio": 0,
+      "fim": 23
+    },
+    "dias_semana_incluir": [0, 1, 2, 3, 4, 5, 6],
+    "minimo_apostas_por_hora": 1
+  },
+  "alertas": {
+    "assertividade_minima": 70.0,
+    "assertividade_alvo": 80.0,
+    "sequencia_maxima_derrotas": 5,
+    "variacao_maxima_diaria": 20.0
+  },
+  "recomendacoes": {
+    "horarios_melhores_quantidade": 5,
+    "horarios_piores_quantidade": 5,
+    "tipos_melhores_quantidade": 3,
+    "incluir_estatisticas_detalhadas": true
+  },
+  "logging": {
+    "nivel": "INFO",
+    "formato": "%(asctime)s - %(levelname)s - %(message)s",
+    "arquivo_log": "bbotfantan.log",
+    "console_output": true
+  },
+  "performance": {
+    "usar_multiprocessing": false,
+    "chunk_size": 1000,
+    "cache_resultados": true,
+    "limpar_cache_apos": "1 day"
+  }
+}
